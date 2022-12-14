@@ -8,7 +8,7 @@ const htmlPlugin = new HtmlWebPackPlugin({
 })
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   devServer: {
     magicHtml: true,
     historyApiFallback: true,
