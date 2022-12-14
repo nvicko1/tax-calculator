@@ -2,11 +2,40 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { taxCalculator, grossIncome, netIncome } from '../utlis/tax'
 
-const Income = ({ income, incSet }) => {
+const Income = ({ income, incSet, time }) => {
   return (
     <>
       <div className="p-2">
-        <h2 className="m-2">Your Income ${income ? income : 0} a month</h2>
+        <div
+          style={{
+            background: `linear-gradient(var(--primary-dark), var(--primary-light))`,
+            padding: '3px',
+            border: '2px solid gray',
+            marginBottom: '2px',
+            color: 'white',
+          }}
+          className="w-full lg:w-[400px]"
+        >
+          <h2 className="m-2">
+            Your Gross Income $
+            {income ? Number(grossIncome(income, time)).toFixed(0) : 0} {time}
+          </h2>
+        </div>
+        <div
+          style={{
+            background: `linear-gradient(var(--primary-dark), var(--primary-light))`,
+            padding: '3px',
+            border: '2px solid gray',
+            marginBottom: '2px',
+            color: 'white',
+          }}
+          className="w-full  lg:w-[400px]"
+        >
+          <h2 className="m-2">
+            Your Net Income $
+            {income ? Number(netIncome(income, time)).toFixed(0) : 0} {time}
+          </h2>
+        </div>
       </div>
       <div className="overflow-x-auto relative  m-2">
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 ">
@@ -101,17 +130,18 @@ const Income = ({ income, incSet }) => {
       <div className="mx-2">
         <Link to="/">
           <button
+            style={{
+              fontSize: '20px',
+              border: '2px solid gray',
+              marginBottom: '2px',
+              color: 'white',
+            }}
             className="w-full mt-2 lg:w-[400px] hover:shadow-xl hover:shadow-indigo-500/50 "
             onClick={() => incSet(0, 'monthly')}
           >
             Calculate Again
           </button>
         </Link>
-
-        <p>
-          <em>Disclaimer:</em>This is not real tax, is based on imaginary tax
-          percentage
-        </p>
       </div>
     </>
   )
