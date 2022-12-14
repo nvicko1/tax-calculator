@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { taxCalculator, grossIncome, netIncome } from "../utlis/tax";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { taxCalculator, grossIncome, netIncome } from '../utlis/tax'
 
 const Income = ({ income, incSet, time }) => {
   return (
@@ -9,10 +9,10 @@ const Income = ({ income, incSet, time }) => {
         <div
           style={{
             background: `linear-gradient(var(--primary-dark), var(--primary-light))`,
-            padding: "3px",
-            border: "2px solid gray",
-            marginBottom: "2px",
-            color: "white",
+            padding: '3px',
+            border: '2px solid gray',
+            marginBottom: '2px',
+            color: 'white',
           }}
           className="w-full lg:w-[400px]"
         >
@@ -24,10 +24,10 @@ const Income = ({ income, incSet, time }) => {
         <div
           style={{
             background: `linear-gradient(var(--primary-dark), var(--primary-light))`,
-            padding: "3px",
-            border: "2px solid gray",
-            marginBottom: "2px",
-            color: "white",
+            padding: '3px',
+            border: '2px solid gray',
+            marginBottom: '2px',
+            color: 'white',
           }}
           className="w-full  lg:w-[400px]"
         >
@@ -64,13 +64,13 @@ const Income = ({ income, incSet, time }) => {
                 Weekly
               </th>
               <td className="py-4 px-6">
-                ${grossIncome(income, "weekly").toFixed(2)}
+                ${grossIncome(income, 'weekly').toFixed(2)}
               </td>
               <td className="py-4 px-6">
-                ${taxCalculator(income, "weekly").toFixed(2)}
+                ${taxCalculator(income, 'weekly').toFixed(2)}
               </td>
               <td className="py-4 px-6">
-                ${netIncome(income, "weekly").toFixed(2)}
+                ${netIncome(income, 'weekly').toFixed(2)}
               </td>
             </tr>
             <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -81,13 +81,13 @@ const Income = ({ income, incSet, time }) => {
                 Fortnightly
               </th>
               <td className="py-4 px-6">
-                ${grossIncome(income, "fortnightly").toFixed(2)}
+                ${grossIncome(income, 'fortnightly').toFixed(2)}
               </td>
               <td className="py-4 px-6">
-                ${taxCalculator(income, "fortnightly").toFixed(2)}
+                ${taxCalculator(income, 'fortnightly').toFixed(2)}
               </td>
               <td className="py-4 px-6">
-                ${netIncome(income, "fortnightly").toFixed(2)}
+                ${netIncome(income, 'fortnightly').toFixed(2)}
               </td>
             </tr>
             <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -98,13 +98,13 @@ const Income = ({ income, incSet, time }) => {
                 Monthly
               </th>
               <td className="py-4 px-6">
-                ${Number(grossIncome(income, "monthly")).toFixed(2)}
+                ${Number(grossIncome(income, 'monthly')).toFixed(2)}
               </td>
               <td className="py-4 px-6">
-                ${taxCalculator(income, "monthly").toFixed(2)}
+                ${taxCalculator(income, 'monthly').toFixed(2)}
               </td>
               <td className="py-4 px-6">
-                ${netIncome(income, "monthly").toFixed(2)}
+                ${netIncome(income, 'monthly').toFixed(2)}
               </td>
             </tr>
             <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -115,13 +115,13 @@ const Income = ({ income, incSet, time }) => {
                 Annualy
               </th>
               <td className="py-4 px-6">
-                ${Number(grossIncome(income, "annualy")).toFixed(2)}
+                ${Number(grossIncome(income, 'annualy')).toFixed(2)}
               </td>
               <td className="py-4 px-6">
-                ${taxCalculator(income, "annualy").toFixed(2)}
+                ${taxCalculator(income, 'annualy').toFixed(2)}
               </td>
               <td className="py-4 px-6">
-                ${Math.round(netIncome(income, "annualy")).toFixed(2)}
+                ${Math.round(netIncome(income, 'annualy')).toFixed(2)}
               </td>
             </tr>
           </tbody>
@@ -131,20 +131,20 @@ const Income = ({ income, incSet, time }) => {
         <Link to="/">
           <button
             style={{
-              fontSize: "20px",
-              border: "2px solid gray",
-              marginBottom: "2px",
-              color: "white",
+              fontSize: '20px',
+              border: '2px solid gray',
+              marginBottom: '2px',
+              color: 'white',
             }}
             className="w-full mt-2 lg:w-[400px] hover:shadow-xl hover:shadow-indigo-500/50 "
-            onClick={() => incSet(0, "monthly")}
+            onClick={() => incSet(0, 'monthly')}
           >
-            Calculate Again
+            Calculate again
           </button>
         </Link>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Income;
+export default Income
