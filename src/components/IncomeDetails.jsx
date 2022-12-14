@@ -4,12 +4,7 @@ import { MULTI } from '../constants/tax.constants'
 
 const IncomeDetails = (props) => {
   const [income, setIncome] = useState(props.income)
-  const [timeIncome, setTimeIncome] = useState('monthly')
   const [gross, setGross] = useState(true)
-
-  const handleSetTimeIncome = (e) => {
-    setTimeIncome(e.target.value)
-  }
 
   const handleIncome = (e) => {
     setIncome(e.target.value)
@@ -36,8 +31,9 @@ const IncomeDetails = (props) => {
           <div className="flex flex-col my-2 py-2 mx-4">
             <label htmlFor="">Salary:</label>
             <select
-              defaultValue={timeIncome}
-              onChange={handleSetTimeIncome}
+              defaultValue={props.time}
+              value={props.time}
+              onChange={(e) => props.handleSetTime(e.target.value)}
               name="weekly"
               className="lg:w-[400px] md:w-full border p-2"
             >
@@ -89,11 +85,17 @@ const IncomeDetails = (props) => {
             <div className="flex flex-col my-2 p-2">
               <button
                 id="btn"
+                style={{
+                  fontSize: '18px',
+                  border: '2px solid gray',
+                  marginBottom: '2px',
+                  color: 'white',
+                }}
                 className="lg:w-[400px] mx-2 hover:shadow-xl hover:shadow-indigo-500/50 hover:scale-105"
                 onClick={() =>
                   props.incSet(
                     gross === 'false' ? income * MULTI : income,
-                    timeIncome
+                    props.time
                   )
                 }
               >
