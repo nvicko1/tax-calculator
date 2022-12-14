@@ -1,11 +1,17 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const path = require("path");
 const htmlPlugin = new HtmlWebPackPlugin({
   template: "./src/index.html",
   filename: "./index.html",
+  publicPath: "/",
 });
 
 module.exports = {
   mode: "production",
+  devServer: {
+    magicHtml: true,
+    historyApiFallback: true,
+  },
   module: {
     rules: [
       {

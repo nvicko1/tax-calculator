@@ -1,22 +1,23 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { MULTI } from "../constants/tax.constants";
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { MULTI } from '../constants/tax.constants'
 
 const IncomeDetails = (props) => {
-  const [income, setIncome] = useState(props.income);
-  const [timeIncome, setTimeIncome] = useState("monthly");
-  const [gross, setGross] = useState(true);
+  const [income, setIncome] = useState(props.income)
+  const [timeIncome, setTimeIncome] = useState('monthly')
+  const [gross, setGross] = useState(true)
+
   const handleSetTimeIncome = (e) => {
-    setTimeIncome(e.target.value);
-  };
+    setTimeIncome(e.target.value)
+  }
 
   const handleIncome = (e) => {
-    setIncome(e.target.value);
-  };
+    setIncome(e.target.value)
+  }
 
   const handleGross = (e) => {
-    setGross(e.target.value);
-  };
+    setGross(e.target.value)
+  }
 
   return (
     <div className="mx-2 my-2">
@@ -53,15 +54,14 @@ const IncomeDetails = (props) => {
                 id="hosting-small"
                 name="hosting"
                 value={true}
-                className="hidden peer"
-                required
+                className="hidden peer "
                 onChange={handleGross}
               />
               <label
                 for="hosting-small"
-                className="hover:scale-105 peer-checked:scale-105 inline-flex lg:w-[400px] justify-between items-center p-3 w-full text-zinc-50 bg-gradient-to-r from-[var(--primary-dark)] to-[var(--primary-light)] text-white border border-primary-dark cursor-pointer dark:hover:text-gray-50 dark:border-gray-50 dark:peer-checked:text-blue-50 peer-checked:border-zinc-900 peer-checked:text-blue-50 peer-checked:shadow-xl peer-checked:shadow-indigo-500/50 hover:text-gray-50 hover:bg-primary-dark dark:text-gray-900 dark:bg-gray-50 dark:hover:bg-gray-500"
+                className=" hover:scale-105 peer-checked:scale-105 inline-flex lg:w-[400px] justify-between items-center p-3 w-full text-zinc-50 peer-checked:bg-gradient-to-r from-[var(--primary-dark)] to-[var(--primary-light)] text-white border border-primary-dark cursor-pointer dark:hover:text-gray-50 dark:border-gray-50 dark:peer-checked:text-blue-50 peer-checked:border-zinc-900 peer-checked:text-blue-50 peer-checked:shadow-lg peer-checked:shadow-indigo-500/50 hover:text-gray-50 hover:bg-primary-dark bg-slate-500 "
               >
-                <div className="block">
+                <div>
                   <div className="w-full">Gross income</div>
                 </div>
               </label>
@@ -77,7 +77,7 @@ const IncomeDetails = (props) => {
               />
               <label
                 for="hosting-big"
-                className="hover:scale-105 peer-checked:scale-105 inline-flex lg:w-[400px] justify-between items-center p-3 w-full text-zinc-50 bg-gradient-to-r from-[var(--primary-dark)] to-[var(--primary-light)] text-white border border-primary-dark cursor-pointer dark:hover:text-gray-50 dark:border-gray-50 dark:peer-checked:text-blue-50 peer-checked:border-zinc-900 peer-checked:text-blue-50 peer-checked:shadow-lg peer-checked:shadow-indigo-500/50 hover:text-gray-50 hover:bg-primary-dark dark:text-gray-900 dark:bg-gray-50 dark:hover:bg-gray-500"
+                className="hover:scale-105 peer-checked:scale-105 inline-flex lg:w-[400px] justify-between items-center p-3 w-full text-zinc-50 peer-checked:bg-gradient-to-r from-[var(--primary-dark)] to-[var(--primary-light)] text-white border border-primary-dark cursor-pointer dark:hover:text-gray-50 dark:border-gray-50 dark:peer-checked:text-blue-50 peer-checked:border-zinc-900 peer-checked:text-blue-50 peer-checked:shadow-lg peer-checked:shadow-indigo-500/50 hover:text-gray-50 hover:bg-primary-dark bg-slate-500"
               >
                 <div className="block">
                   <div className="w-full">net inome</div>
@@ -88,10 +88,11 @@ const IncomeDetails = (props) => {
           <Link to="/income">
             <div className="flex flex-col my-2 p-2">
               <button
+                id="btn"
                 className="lg:w-[400px] mx-2 hover:shadow-xl hover:shadow-indigo-500/50 hover:scale-105"
                 onClick={() =>
                   props.incSet(
-                    gross === "false" ? income * MULTI : income,
+                    gross === 'false' ? income * MULTI : income,
                     timeIncome
                   )
                 }
@@ -103,7 +104,7 @@ const IncomeDetails = (props) => {
         </form>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default IncomeDetails;
+export default IncomeDetails
