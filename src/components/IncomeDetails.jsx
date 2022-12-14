@@ -1,18 +1,18 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { MULTI } from '../constants/tax.constants'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { MULTI } from "../constants/tax.constants";
 
 const IncomeDetails = (props) => {
-  const [income, setIncome] = useState(props.income)
-  const [gross, setGross] = useState(true)
+  const [income, setIncome] = useState(props.income);
+  const [gross, setGross] = useState(true);
 
   const handleIncome = (e) => {
-    setIncome(e.target.value)
-  }
+    setIncome(e.target.value);
+  };
 
   const handleGross = (e) => {
-    setGross(e.target.value)
-  }
+    setGross(e.target.value);
+  };
 
   return (
     <div className="mx-2 my-2">
@@ -86,15 +86,15 @@ const IncomeDetails = (props) => {
               <button
                 id="btn"
                 style={{
-                  fontSize: '18px',
-                  border: '2px solid gray',
-                  marginBottom: '2px',
-                  color: 'white',
+                  fontSize: "18px",
+                  border: "2px solid gray",
+                  marginBottom: "2px",
+                  color: "white",
                 }}
                 className="lg:w-[400px] mx-2 hover:shadow-xl hover:shadow-indigo-500/50 hover:scale-105"
                 onClick={() =>
                   props.incSet(
-                    gross === 'false' ? income * MULTI : income,
+                    gross === "false" ? income * MULTI : income,
                     props.time
                   )
                 }
@@ -106,7 +106,7 @@ const IncomeDetails = (props) => {
         </form>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default IncomeDetails
+export default IncomeDetails;

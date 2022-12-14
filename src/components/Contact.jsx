@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 const Contact = () => {
   return (
     <div id="contact" className="max-w-[1140px] m-auto w-full p-4 py-16">
@@ -37,7 +37,7 @@ const Contact = () => {
         </form>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
