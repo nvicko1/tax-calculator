@@ -13,9 +13,11 @@
     "autoprefixer": "^10.4.13",
     "babel-loader": "^9.1.0",
     "babel-preset-react": "^6.24.1",
+    "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.2",
     "eslint": "^8.29.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "html-webpack-plugin": "^5.5.0",
     "postcss": "^8.4.19",
     "prettier": "^2.8.1",
@@ -33,7 +35,7 @@
   },
   "scripts": {
     "start": "webpack serve --config webpack.config.js",
-    "lint": "eslint . --ext .js --ext .jsx ",
+    "lint": "eslint src/**/*.js[x]",
     "build": "webpack --config webpack.config.production.js && npx tailwindcss -i ./src/index.css -o ./dist/output.css"
   }
 }
