@@ -31,9 +31,6 @@ const Calculator = () => {
         <Link to="/">
           <button>Income Detals</button>
         </Link>
-        {/* <Link to="/Income">
-          <button>Income </button>
-        </Link> */}
       </div>
       <div className="max-w-[1140px] border shadow-lg h-[600px]">
         <div className="flex justify-between border">

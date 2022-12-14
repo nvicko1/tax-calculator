@@ -9,6 +9,7 @@
   --primary-light: #789dff;
   --surface: #fcfcff;
   --white: #ffffff;
+  --gray: #474747;
 }
 
 @layer base {

@@ -671,6 +671,11 @@ html {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-slate-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -818,6 +823,7 @@ html {
   --primary-light: #789dff;
   --surface: #fcfcff;
   --white: #ffffff;
+  --gray: #474747;
 }
 
 body {
@@ -899,15 +905,13 @@ h2 {
   border-color: rgb(24 24 27 / var(--tw-border-opacity));
 }
 
+.peer:checked ~ .peer-checked\:bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
 .peer:checked ~ .peer-checked\:text-blue-50 {
   --tw-text-opacity: 1;
   color: rgb(239 246 255 / var(--tw-text-opacity));
-}
-
-.peer:checked ~ .peer-checked\:shadow-xl {
-  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .peer:checked ~ .peer-checked\:shadow-lg {
@@ -957,19 +961,9 @@ h2 {
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 
-  .dark\:text-gray-900 {
-    --tw-text-opacity: 1;
-    color: rgb(17 24 39 / var(--tw-text-opacity));
-  }
-
   .dark\:hover\:bg-gray-600:hover {
     --tw-bg-opacity: 1;
     background-color: rgb(75 85 99 / var(--tw-bg-opacity));
-  }
-
-  .dark\:hover\:bg-gray-500:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(107 114 128 / var(--tw-bg-opacity));
   }
 
   .dark\:hover\:text-gray-50:hover {
