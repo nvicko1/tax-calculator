@@ -1,5 +1,5 @@
-import React from "react";
-import { CiCalculator1 } from "react-icons/ci";
+import React from 'react'
+import { CiCalculator1 } from 'react-icons/ci'
 const Footer = () => {
   return (
     <div className="w-full py-8 m-auto border-t-4 bottom-0 ">
@@ -10,7 +10,7 @@ const Footer = () => {
         </h1>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

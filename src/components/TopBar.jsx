@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 
-import { CiCalculator1 } from "react-icons/ci";
+import { CiCalculator1 } from 'react-icons/ci'
 
 const TopBar = () => {
   return (
@@ -10,7 +10,7 @@ const TopBar = () => {
         <h1 className="text-xl font-bold text-gray-700">TAX CALCULATOR</h1>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default TopBar;
+export default TopBar

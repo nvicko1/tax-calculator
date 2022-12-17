@@ -12,7 +12,16 @@ module.exports = {
   rules: {
     'prettier/prettier': 'error',
   },
-  plugins: ['prettier'],
+  plugins: [
+    'prettier',
+    'airbnb-typescript',
+    'plugin:cypress/recommended',
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
+    'prettier/@typescript-eslint',
+    'prettier/react',
+  ],
 
   parser: '@babel/eslint-parser',
   parserOptions: {
