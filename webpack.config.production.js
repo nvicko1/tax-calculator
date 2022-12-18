@@ -10,10 +10,6 @@ const htmlPlugin = new HtmlWebPackPlugin({
 
 module.exports = {
   mode: 'production',
-  devServer: {
-    magicHtml: true,
-    historyApiFallback: true,
-  },
   module: {
     rules: [
       {
